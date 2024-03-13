@@ -1,0 +1,24 @@
+.screening-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the width of each button */
+    gap: 20px; /* Add gap between buttons */
+}
+
+.screening {
+    /* Styling for individual screenings (movie poster, title, etc.) */
+}
+
+.screening-button {
+    background-color: #D22B2B;
+    color: #fff;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.screening-button:hover {
+    background-color: #800020;
+}

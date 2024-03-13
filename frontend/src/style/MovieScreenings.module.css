@@ -1,0 +1,141 @@
+/* ScreeningInfo.module.css */
+
+.movieScreeningsBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.movieInfoContainerWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Two columns of equal width */
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    justify-items: center;
+}
+
+.movieInfoContainerRight,
+.movieInfoContainerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    padding: 15px;
+    background-color: #fffff6;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* New - Set position relative */
+}
+
+.containerHeader {
+    position: absolute; /* New - Set position absolute */
+    top: 0; /* Align to the top */
+    left: 15px; /* Align to the start with padding consideration */
+    width: calc(100% - 30px); /* Adjust width considering padding */
+    text-align: left;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.movieTitle {
+    color: #D22B2B;
+}
+
+.screeningsTitle {
+    color: black;
+}
+
+.h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+
+.movieDetails, .screeningGrid {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.screeningGrid {
+
+}
+
+/*
+.movieDetails {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Adjust margins if necessary */
+
+
+.movieInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;  /* Adjust flex value if needed */
+    order: 2;  /* Display movie info after the image */
+    align-items: center;
+    padding-left: 20px;
+}
+
+.movieDetails .moviePoster img {
+    width: 50vh;
+    height: 70vh;
+    margin-bottom: 0px;
+    border-radius: 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    order: 1;  /* Display image before movie info */
+}
+
+.movieInfoContainerRight .screeningsHeader h3 {
+    color: black;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+.screeningGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+
+
+}
+
+.screeningItem {
+    padding: 10px;
+
+}
+
+.screeningItem .directToScreeningButton {
+    width: 95%;
+    background-color: #D22B2B;
+    color: white;
+    font-weight: bolder;
+    padding: 25px 25px;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.screeningItem .directToScreeningButton:hover {
+    background-color: black;
+}

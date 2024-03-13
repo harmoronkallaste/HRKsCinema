@@ -1,0 +1,88 @@
+/* MovieCatalogOld.module.css */
+
+.movieCatalogWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px 0 50px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.movieListRow {
+    display: flex;
+    flex-wrap: wrap; /* Allow movies to wrap to the next line */
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column; /* Arrange image and details vertically */
+    align-items: center; /* Center items horizontally */
+    height: 600px;
+    width: calc(20% - 75px); /* Each movie container takes up 20% of the row width */
+    padding: 25px;
+    background-color: #fbf7f5;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.movieImage {
+    margin-bottom: 10px; /* Add space between image and details */
+}
+
+.movieImage img {
+    width: 300px; /* Make the image fill its container */
+    height: 460px; /* Maintain aspect ratio */
+    background-size: cover;
+    border-radius: 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.movieDetails {
+    display: flex;
+    flex-direction: column; /* Stack movie name and buttons vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100%; /* Take up full height of the movie container */
+}
+
+.movieDetails .movieName {
+    margin-bottom: 3px; /* Adjusted margin to make the gap smaller */
+    height: 15px; /* Set a fixed height for the movie name container */
+}
+
+.movieDetails .movieName h3{
+    font-size: 20px;
+
+}
+
+.movieDetails .movieButtons {
+    margin-top: auto; /* Push the buttons to the bottom of the movie details container */
+}
+
+.movieDetails .movieScreenings {
+    background-color: #D22B2B;
+    color: white; /* Set text color to white */
+    padding: 15px 25px; /* Add padding to the button */
+    border: none;
+    border-radius: 60px; /* Increase border-radius for rounded buttons */
+    cursor: pointer;
+    transition: background-color 0.4s, font-size 0.4s; /* Smooth transition effect */
+}
+
+.movieDetails .movieScreenings:hover {
+    background-color: black; /* New background color on hover */
+    font-size: 15px;
+
+}
+
+.h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #D22B2B;
+}

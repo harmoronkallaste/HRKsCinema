@@ -1,0 +1,328 @@
+/* ScreeningInfo.module.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.screeningInfoBody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height:100vh;
+    margin:0;
+    padding: 50px;
+    gap: 75px;
+    justify-content: center;
+    padding: 50px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+.movieContainer,
+.seatingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fffff6;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 15px;
+    min-height: 600px;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.movieContainer {
+
+}
+
+.moviePoster img {
+    width: 50vh;
+    height: 70vh;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.movieTitle {
+    font-size: 30px;
+    color: #D22B2B;
+}
+
+.seatingTitle {
+    margin: 0;
+    font-size: 30px;
+    color: black;
+}
+
+.dateTitle {
+    font-size: 25px;
+    color: black;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.roomTitle {
+    font-size: 25px;
+    color: #424444;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.movieDetails {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.basicInformation,
+.seatingInformation {
+    width: 70vh;
+    text-align: center;
+    gap: 10px;
+}
+
+/* ScreeningInfo.module.css */
+
+.screeningInfoBody {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align to top */
+
+    font-family: sans-serif;
+}
+
+
+.movieContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align text to the left */
+    width: 75%; /* Adjust the width as necessary */
+}
+
+.movieContainer h1,
+.movieContainer h2,
+.movieContainer h3,
+.seatingContainer h1,
+.seatingContainer h2,
+.seatingContainer h3{
+    padding: 10px 0 10px 0;
+    margin: 0 0 0 0;
+    line-height: normal; /* Adjust line height as needed */
+}
+
+.movieInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;  /* Adjust flex value if needed */
+    order: 2;  /* Display movie info after the image */
+    align-items: center;
+}
+
+.seatingContainer {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #6ae34e;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    position: relative;
+    display: flex;
+    align-items: center; /* Center the seat number vertically */
+    justify-content: center; /* Center the seat number horizontally */
+}
+
+.screen {
+    background-color: #e4e4e4;
+    width: 90%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* margin-right: 55px; */
+    text-align: center;
+    line-height: 40px;
+    border-radius: 30px;
+}
+
+.rowNumber {
+    width: 3em; /* Give row numbers a fixed width */
+    text-align: center; /* Center text within the fixed width */
+    margin-left: 5px; /* Same as the gap between seats */
+    margin-right: 5px; /* Same as the gap between seats */
+}
+.rowLabel {
+    display: flex;
+    align-items: center; /* Vertically center row labels */
+    justify-content: center; /* Horizontally center row labels */
+    padding: 0 10px; /* Adjust as needed */
+    font-weight: bold;
+    font-size: 16px; /* Adjust as needed */
+}
+
+.seat:hover:not(.occupied, .vip) {
+    background-color: #419a2e; /* Hover state color for non-occupied seats */
+}
+
+.seat.selected {
+    background-color: limegreen; /* Selected seat color */
+}
+
+.seatNumber {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 10px; /* Adjust font size as needed */
+}
+
+.seat.occupied, .seat.vip.occupied {
+    background-color: #D22B2B; /* Occupied seat color, set to red */
+    cursor: default; /* Reset cursor to default */
+    pointer-events: none; /* Disable pointer events */
+    font-weight: normal;
+}
+
+.seat.vip {
+    background-color: #f7d700; /* VIP seat color, set to gold */
+}
+
+.seat.vip:hover {
+    background-color: #bda508;
+}
+
+.seatingArea {
+    display: flex;
+    flex-direction: column-reverse; /* Reverse the row order */
+    align-items: center;
+    padding: 0 0 0 0;
+    margin: 0 0 0 60px;
+}
+
+.seatRow {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align row numbers vertically */
+}
+
+/* --------------------------------------------------------------- */
+
+.ticketCounter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #e4e4e4;
+    border-radius: 30px;
+}
+
+.ticketDescription {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.ticketPriceStyle {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.counterControls {
+    display: flex;
+    align-items: center;
+}
+
+.counterControls button {
+    border: 1px solid #fffff6;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.decrementButton {
+    background-color: #fffff6;
+    color: black;
+    border-radius: 10px;
+}
+
+.incrementButton {
+    background-color: #D22B2B;
+    color: white;
+    border-radius: 10px;
+}
+
+.incrementButton:hover {
+    background-color: #800020;
+}
+
+.counterControls button:disabled {
+    background-color: #fffff6;
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+.counterControls span {
+    padding: 5px 10px;
+}
+
+.ticketSelectionArea {
+    width:75%;
+    margin-right: 20px;
+}
+
+.confirmTicketsButton {
+    width: 75%;
+    background-color: #D22B2B;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 25px 25px;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background-color 0.8s, width 0.4s;
+    margin-top: auto;
+}
+
+.confirmTicketsButton:hover {
+    width: 85%;
+    background-color: black;
+}
+
