@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../style/App.css';
 import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom';
 import MovieScreenings from "./MovieScreenings";
@@ -6,13 +6,17 @@ import GuestPage from './GuestPage';
 import LoginPage from './LoginPage';
 import MovieCatalog from "./MovieCatalog";
 import ScreeningInfo from "./ScreeningInfo";
+import AllScreenings from "./AllScreenings";
 import logoHrk from '../other/logohrk.png'
+
+
 
 function App() {
     return (
         <Router>
             <Routes>
                 <Route path="/" element={<LandingPage />} />
+                <Route path="/allScreenings" element={<AllScreenings />} />
                 <Route path="/movie/:id" element={<MovieScreenings />} />
                 <Route path="/guest" element={<GuestPage />} />
                 <Route path="/login" element={<LoginPage />} />
@@ -25,6 +29,16 @@ function App() {
 
 function LandingPage() {
     const navigate = useNavigate();
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        // Fetch the movies for the slideshow
+        fetch('http://localhost:8080/movies/first10')
+            .then(response => response.json())
+            .then(data => {console.log(data)
+                    setMovies(data)})
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
 
     return (
         <div className="App">

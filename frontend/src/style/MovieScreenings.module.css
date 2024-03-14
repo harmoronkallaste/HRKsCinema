@@ -1,5 +1,13 @@
 /* ScreeningInfo.module.css */
 
+.movieInfoContainerWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Two columns of equal width */
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    gap: 60px;
+}
 .movieScreeningsBody {
     display: flex;
     justify-content: center;
@@ -9,14 +17,6 @@
     font-family: sans-serif;
 }
 
-.movieInfoContainerWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;  /* Two columns of equal width */
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-    justify-items: center;
-}
 
 .movieInfoContainerRight,
 .movieInfoContainerLeft {
@@ -133,7 +133,7 @@
     border: none;
     border-radius: 60px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 1.2s;
 }
 
 .screeningItem .directToScreeningButton:hover {

@@ -27,16 +27,14 @@
 }
 
 .App-header {
-  background-color: #fffff6;
-  height: 50vh; /* half of the viewport height */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 50vh; /* Adjust if needed to make space for the slider */
+  background-color: #fffff6;
   color: #D22B2B;
   border-bottom: 3px solid black;
-  font-size: 40px;
 }
 
 .App-header h1 {
@@ -114,13 +112,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

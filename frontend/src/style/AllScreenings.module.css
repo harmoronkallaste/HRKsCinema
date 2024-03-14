@@ -1,0 +1,133 @@
+.allScreenings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuBar {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: black; /* Dark background for the menu */
+    width: 100%; /* Full width */
+    overflow-x: auto; /* Allow scrolling on small screens */
+}
+
+.dayButton {
+    background-color: #666;
+    width: 6%;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.dayButton:hover, .dayButton.active {
+    background-color: #D22B2B; /* Highlighted color for active or hovered item */
+}
+
+.screeningsList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+}
+
+.screeningContainer {
+    background-color: #fffff6;
+    padding: 40px;
+    margin: 10px 0;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/*.screeningContainer {
+    background-color: white;
+    padding: 50px;
+    margin: 10px 0;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 60px;
+}*/
+
+.screeningContainer .moviePoster {
+    flex-shrink: 0; /* Prevent poster from shrinking */
+    margin-right: 15px;
+    width: 100px; /* Fixed width for poster */
+    height: 150px; /* Fixed height for poster */
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.screeningContainer .moviePoster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will cover the area, cropping the image if necessary */
+}
+
+.screeningContainer h2 {
+    color: #D22B2B;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.screeningContainer h3 {
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.screeningContainer p {
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.movieInfoAndButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: row; /* Stack buttons vertically */
+    gap: 80px;
+    /*padding-left: 20px; */
+}
+
+.screeningButton {
+    background-color: #D22B2B; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    margin-bottom: 10px; /* Space between buttons */
+    padding: 10px;
+    border-radius: 60px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bolder;
+    box-sizing: border-box;
+    height: 7vh;
+    width: 24vh;
+    transition: background-color 1.2s;
+}
+
+.screeningButton:hover {
+    background-color: black; /* Darker color on hover */
+}
