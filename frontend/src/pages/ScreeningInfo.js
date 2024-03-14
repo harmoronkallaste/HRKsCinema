@@ -80,7 +80,7 @@ function ScreeningInfo() {
     }, [id]);
 
     const formatScreeningTime = timestamp => {
-        return moment(timestamp).format('LLL'); // Format the date and time as needed
+        return moment(timestamp).format('dddd HH:mm, MMM Do YYYY'); // Format the date and time as needed
     };
 
     if (!screeningInfo || numberOfReservedSeats === null) {
