@@ -31,59 +31,12 @@ public class Movies {
         return id;
     }
 
-    public Integer getRanking() {
-        return ranking;
-    }
-
     public String getMovieName() {
         return movieName;
-    }
-
-    public Integer getReleaseYear() {
-        return releaseYear;
-    }
-
-    public Double getRating() {
-        return rating;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public String getCertificate() {
-        return certificate;
     }
 
     public String getRunTime() {
         return runTime;
     }
 
-    public String getTagline() {
-        return tagline;
-    }
-
-    public Long getBudget() {
-        return budget;
-    }
-
-    public Long getBoxOffice() {
-        return boxOffice;
-    }
-
-    public String getCasts() {
-        return casts;
-    }
-
-    public String getDirectors() {
-        return directors;
-    }
-
-    public String getWriters() {
-        return writers;
-    }
-
-    public String getPicUrl() {
-        return picUrl;
-    }
 }

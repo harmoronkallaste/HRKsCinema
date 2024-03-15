@@ -192,7 +192,7 @@ function AllScreenings() {
 
                             <button className={`${styles.screeningButton} ${styles.getTicketsButton}`}
                                     onClick={() => navigate(`/screenings/info/${screening.screening.id}`)}>Get tickets</button>
-                            <button className={styles.screeningButton}>View movie</button>
+                            {/*<button className={styles.screeningButton}>View movie</button> */}
                             <button className={styles.screeningButton}
                                 onClick={() => navigate(`/movie/${screening.movie.id}`)}>Schedule</button>
 

@@ -1,6 +1,5 @@
 package com.cgi.kinoapp.model;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
 
 import java.util.List;
 import java.util.Map;
@@ -30,4 +29,5 @@ public class Seating {
     public void setRecommendedSeats(Map<Integer, List<Integer>> recommendedSeats) {
         this.recommendedSeats = recommendedSeats;
     }
+
 }
