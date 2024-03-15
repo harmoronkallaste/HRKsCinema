@@ -142,7 +142,7 @@ html, body {
     border-radius: 10px;
     margin: 5px;
     cursor: pointer;
-    transition: background-color 0.4s;
+    transition: background-color 0.5s;
     position: relative;
     display: flex;
     align-items: center; /* Center the seat number vertically */
@@ -181,7 +181,23 @@ html, body {
 }
 
 .seat.selected {
-    background-color: limegreen; /* Selected seat color */
+    background-color: dodgerblue; /* Selected seat color */
+}
+
+.seat.selected:hover {
+    background-color: #0079ea;
+}
+
+.seat.vip.selected {
+    background-color: dodgerblue;
+}
+
+.seat.vip.selected:hover {
+    background-color: #0079ea;
+}
+
+.seat.occupied {
+    background-color: purple;
 }
 
 .seatNumber {
