@@ -10,9 +10,9 @@ I hope it makes a difference that I didn't rely on pre-made projects or template
 # How to get it running
 
 ## Make sure you have git installed on your computer and in your terminal enter these commands:
-### git clone --single-branch --branch development --depth 1 https://github.com/harmoronkallaste/HRKsCInema.git
-### navigate to the cloned project's folder
-### git checkout 6272ac94d884f2fb3e33dafcb24df6b77cea3f62
+git clone --single-branch --branch development --depth 1 https://github.com/harmoronkallaste/HRKsCInema.git
+(navigate to the cloned project's folder)
+git checkout 6272ac94d884f2fb3e33dafcb24df6b77cea3f62
 
 ## Install IntelliJ (I don't know if it also works on other IDE-s)
 
