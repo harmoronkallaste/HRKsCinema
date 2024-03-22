@@ -58,10 +58,6 @@ function LandingPage() {
                     <button className="google-login" onClick={() => navigate('/allScreenings')}> View Schedule</button>
                     <p className="description"> This will allow you to see the cinema's screening schedule  </p>
                 </div>
-                <div className="login-option">
-                    <button className="guest-login" onClick={() => navigate('/guest')}> Continue as guest</button>
-                    <p className="description"> No login required. </p>
-                </div>
             </main>
         </div>
     );
