@@ -55,9 +55,8 @@ function LandingPage() {
                     <p className="description"> This will allow you to see all movies that are being screened. </p>
                 </div>
                 <div className="login-option">
-                    <button className="google-login" onClick={() => navigate('/login')}> Login using Google</button>
-                    <p className="description"> This will allow you to access your booking history and
-                        preferences. </p>
+                    <button className="google-login" onClick={() => navigate('/allScreenings')}> View Schedule</button>
+                    <p className="description"> This will allow you to see the cinema's screening schedule  </p>
                 </div>
                 <div className="login-option">
                     <button className="guest-login" onClick={() => navigate('/guest')}> Continue as guest</button>

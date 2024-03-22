@@ -148,23 +148,4 @@ public class ReservationService {
 
     }
 
-
-    public List<Reservations> getReservationsByPurchaseId(Integer purchaseId) {
-        return reservationDao.findAllByPurchaseId(purchaseId);
-    }
-
-    public Integer getNumberOfReservedSeatsForScreening(Integer screeningId) {
-        try {
-            // Retrieve reservations for the given screening ID
-            List<Reservations> reservations = reservationDao.findByScreeningId(screeningId);
-
-            // Count the number of reservations
-            Integer numberOfReservedSeats = reservations.size();
-
-            return numberOfReservedSeats;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return -1; // Return -1 if an error occurs
-        }
-    }
 }
