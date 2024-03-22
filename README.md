@@ -1,6 +1,12 @@
 # HRKsCinema
 This is the repository of my project for CGI's internship application. 
 
+# Insight
+Zero templates were used for this project. I copied nothing from other people's projects. I watched a part of a Youtube video on how to connect a PostgreSQL database to Spring Boot and that was it.
+Everything else was developed my be and I used ChatGPT for help during the most difficult parts of frontend/backend connection and some frontend aesthetic details.
+It was my first time working with Spring Boot and also my first time doing a full-stack development project in this size.
+I hope it makes a difference that I didn't rely on pre-made projects or templates and made everything from scratch.
+
 # How to get it running
 
 ## Make sure you have git installed on your computer and in your terminal enter these commands:
