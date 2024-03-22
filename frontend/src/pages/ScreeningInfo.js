@@ -36,7 +36,6 @@ function Seat({ isOccupied, isVip, seatNumber, onSelect, isSelected }) {
 }
 
 function ScreeningInfo() {
-    const [occupancyMatrix, setOccupancyMatrix] = useState([]);
     const [screeningInfo, setScreeningInfo] = useState(null);
     const [numberOfReservedSeats, setNumberOfReservedSeats] = useState(null);
     const {id} = useParams();
@@ -49,16 +48,6 @@ function ScreeningInfo() {
                 const infoData = await infoResponse.json();
                 setScreeningInfo(infoData);
 
-                const occupancyResponse = await fetch(`http://localhost:8080/recommendation/occupancy`, {
-                    method: 'POST',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ screeningId: id }), // Assuming your backend needs the screening ID to fetch occupancy
-                });
-                const occupancyData = await occupancyResponse.json();
-                setOccupancyMatrix(occupancyData);
             } catch (error) {
                 console.error('Fetching error:', error);
             }
@@ -67,26 +56,12 @@ function ScreeningInfo() {
         fetchData();
     }, [id]);
 
-    const fetchOccupancyMatrix = async () => {
-        const response = await fetch('http://localhost:8080/recommendation/occupancy', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({}), // No need to send any specific data for occupancy fetch
-        });
-        if (response.ok) {
-            const matrix = await response.json();
-            setOccupancyMatrix(matrix);
-        }
-    };
 
     const formatScreeningTime = timestamp => {
         return moment(timestamp).format('dddd HH:mm, MMM Do YYYY');
     };
 
-    if (!screeningInfo || numberOfReservedSeats === null) {
+    if (!screeningInfo) {
         return <div>Loading...</div>;
     }
 
@@ -104,7 +79,7 @@ function ScreeningInfo() {
                     </div>
                 </div>
             </div>
-            <SeatingArea  occupancyMatrix={occupancyMatrix}
+            <SeatingArea
                           totalSeats={100} // Assuming fixed number, adjust as necessary
                           screeningInfo={screeningInfo}/>
         </div>
@@ -201,7 +176,6 @@ function SeatingArea({occupiedSeatsCount, totalSeats, screeningInfo}) {
                             return (
                                 <Seat
                                     key={seatId}
-                                    isOccupied={occupancyMatrix[rowIndex][colIndex] === 1}
                                     isVip={isVip}
                                     seatNumber={seatNumber}
                                     onSelect={() => handleSelectSeat(seatId, isVip)}
