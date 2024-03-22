@@ -28,4 +28,8 @@ public class ScreeningInfo {
         return movie;
     }
 
+    public Rooms getRoom() {
+        return room;
+    }
+
 }
