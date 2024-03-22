@@ -1,12 +1,8 @@
 package com.cgi.kinoapp.service;
 
 import com.cgi.kinoapp.dao.EmailSender;
-import com.cgi.kinoapp.info.ScreeningInfo;
 import com.cgi.kinoapp.model.*;
-import com.cgi.kinoapp.service.PurchaseService;
-import com.cgi.kinoapp.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -84,8 +80,6 @@ public class EmailService implements EmailSender {
 
                     Rooms room = roomOptional.get();
                     String roomName = room.getRoom_name();
-
-                    ScreeningInfo screeningInfo = new ScreeningInfo(screening, movie, room);
 
                     content.append("    ").append(movieName).append("   (").append(screening.getStartTime()).append(")").append("\n");
                     content.append("        -  Duration: ").append(runTime).append("\n");

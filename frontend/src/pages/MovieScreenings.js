@@ -248,6 +248,7 @@ function MovieScreenings() {
 
     const formatScreeningTime = timestamp => {
         return moment(timestamp).format('LLL');
+        /*'dddd HH:mm, MMM Do'*/
     };
 
     const goToScreening = screeningId => {

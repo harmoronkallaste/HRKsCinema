@@ -120,10 +120,15 @@ function AllScreenings() {
 
 
     return (
+
         <div className={styles.allScreenings}>
+
             <div className={styles.menuBar}>
+
                 <div className={styles.filtersTitle}> Filters </div>
+
                 <div className={styles.buttonContainer}>
+
                     <div className={styles.dayOptions}>
                         {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day) => (
                             <button
@@ -136,6 +141,7 @@ function AllScreenings() {
 
                         ))}
                     </div>
+
                     <div className={styles.timeOptions}>
                         {timeButtons.map(time => (
                             <button
@@ -147,6 +153,7 @@ function AllScreenings() {
                             </button>
                         ))}
                     </div>
+
                     <div className={styles.genreOptions}>
                         {genreButtons.map((genre) => (
                             <button
@@ -159,42 +166,43 @@ function AllScreenings() {
                         ))}
                     </div>
                 </div>
+
             </div>
-            {/*<div className={styles.genreFilter}>
-                {['Drama', 'Crime', 'Action', 'Biography', 'History'].map(genre => (
-                    <label key={genre}>
-                        <input
-                            type="checkbox"
-                            checked={selectedGenres.includes(genre)}
-                            onChange={() => toggleGenre(genre)}
-                        />
-                        {genre}
-                    </label>
-                ))}
-            </div> */}
+
             <div className={styles.screeningsList}>
+
                 {filteredScreenings.map(screening => (
                     <div key={screening.screening.id} className={styles.screeningContainer}>
+
                         <div className={styles.moviePoster} style={{backgroundImage: `url(${screening.movie.picUrl})`}}>
                             {/* Image will be displayed via background */}
                         </div>
+
                         <div className={styles.movieInfo}>
+
                             <h2>{screening.movie.movieName}</h2>
                             <h3>{moment(screening.screening.startTime).format('dddd HH:mm, MMM Do YYYY')}</h3>
                             <p>Rating: {screening.movie.rating}</p>
                             <p>Room: {screening.room.room_name}</p>
                             <p>Available Seats: {screening.availableSeats !== null ? `${screening.availableSeats} / ${screening.room.totalSeats}` : 'Loading...'}</p>
+
                         </div>
+
                         <div className={styles.buttonGroup}>
+
                             <button className={`${styles.screeningButton} ${styles.getTicketsButton}`}
                                     onClick={() => navigate(`/screenings/info/${screening.screening.id}`)}>Get tickets</button>
-                            <button className={styles.screeningButton}>View movie</button>
+                            {/*<button className={styles.screeningButton}>View movie</button> */}
                             <button className={styles.screeningButton}
                                 onClick={() => navigate(`/movie/${screening.movie.id}`)}>Schedule</button>
+
                         </div>
+
                     </div>
                 ))}
+
             </div>
+
         </div>
     );
 }

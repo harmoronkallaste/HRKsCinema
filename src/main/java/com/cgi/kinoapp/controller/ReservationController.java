@@ -26,10 +26,4 @@ public class ReservationController {
         else return ResponseEntity.notFound().build();
     }
 
-    @GetMapping("howManyReserved/{screeningId}")
-    public ResponseEntity<Integer> getReservedSeatsAmount(@PathVariable Integer screeningId) {
-        Integer howMany = reservationService.getNumberOfReservedSeatsForScreening(screeningId);
-        return ResponseEntity.ok(howMany);
-    }
-
 }

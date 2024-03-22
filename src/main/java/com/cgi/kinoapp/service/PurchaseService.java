@@ -1,9 +1,7 @@
 package com.cgi.kinoapp.service;
 
-import com.cgi.kinoapp.dao.MovieDao;
 import com.cgi.kinoapp.dao.PurchaseDao;
 import com.cgi.kinoapp.dao.ReservationDao;
-import com.cgi.kinoapp.model.Movies;
 import com.cgi.kinoapp.model.Purchases;
 import com.cgi.kinoapp.model.Reservations;
 import org.springframework.beans.factory.annotation.Autowired;

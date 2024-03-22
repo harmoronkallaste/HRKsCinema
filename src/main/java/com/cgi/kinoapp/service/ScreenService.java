@@ -1,8 +1,7 @@
 package com.cgi.kinoapp.service;
 
-import com.cgi.kinoapp.info.ScreeningInfo;
-import com.cgi.kinoapp.info.MovieInfo;
 import com.cgi.kinoapp.dao.ScreeningDao;
+import com.cgi.kinoapp.info.ScreeningInfo;
 import com.cgi.kinoapp.model.Movies;
 import com.cgi.kinoapp.model.Rooms;
 import com.cgi.kinoapp.model.Screenings;
@@ -10,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.sql.Timestamp;
 import java.util.*;
 
 @Service
